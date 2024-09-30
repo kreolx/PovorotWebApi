@@ -1,0 +1,5 @@
+query GetBusyRequests($dateStart: DateTime, $dateEnd: DateTime) {
+  requests(where: { requestedAt: { gte: $dateStart, lte: $dateEnd } }) {
+    requestedAt
+  }
+}
